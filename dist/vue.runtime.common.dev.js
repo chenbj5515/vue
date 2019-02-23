@@ -1065,6 +1065,7 @@ function defineReactive$$1 (
  * already exist.
  */
 function set (target, key, val) {
+  warn(("Cannot set reactive property on undefined, null, or primitive value: " + ((target))));
   console.log('走了set')
   if (isUndef(target) || isPrimitive(target)
   ) {
