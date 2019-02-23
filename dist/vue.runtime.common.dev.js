@@ -1072,6 +1072,7 @@ function set (target, key, val) {
   if (Array.isArray(target) && isValidArrayIndex(key)) {
     target.length = Math.max(target.length, key);
     target.splice(key, 1, val);
+    console.log('添加了一个val===', val)
     return val
   }
   if (key in target && !(key in Object.prototype)) {
